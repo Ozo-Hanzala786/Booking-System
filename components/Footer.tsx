@@ -45,7 +45,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-12 pt-8 border-t border-card-border text-center text-gray-500 text-sm">
-          <p>&copy; {new Date().getFullYear()} Smash Kar. All rights reserved. Keep Grinding.</p>
+          <p>&copy; {new Date().getFullYear()} Smash Kar. Developed by || Muhammad Hanzala</p>
         </div>
       </div>
     </footer>
