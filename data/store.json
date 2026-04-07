@@ -1,0 +1,103 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Vintage Graphic Tee",
+      "price": 999,
+      "category": "Shirts",
+      "image": "https://images.unsplash.com/photo-1576566588028-4147f3842f27?q=80&w=1000&auto=format&fit=crop",
+      "description": "Authentic vintage graphic tee with faded print. Perfect for a relaxed, grunge aesthetic.",
+      "inStock": true,
+      "featured": true,
+      "reviews": []
+    },
+    {
+      "id": "2",
+      "name": "Baggy Cargo Pants",
+      "price": 1499,
+      "category": "Trousers",
+      "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=1000&auto=format&fit=crop",
+      "description": "Oversized baggy fit cargo pants featuring multiple utility pockets and adjustable ankle drawstrings.",
+      "inStock": true,
+      "featured": true,
+      "reviews": []
+    },
+    {
+      "id": "3",
+      "name": "Retro High-Top Sneakers",
+      "price": 2499,
+      "category": "Shoes",
+      "image": "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?q=80&w=1000&auto=format&fit=crop",
+      "description": "Classic retro styled high-tops with premium leather construction and vintage washed out soles.",
+      "inStock": true,
+      "featured": true,
+      "reviews": []
+    },
+    {
+      "id": "4",
+      "name": "Oversized Flannel",
+      "price": 1299,
+      "category": "Shirts",
+      "image": "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?q=80&w=1000&auto=format&fit=crop",
+      "description": "Heavyweight oversized flannel shirt. Wear it buttoned up or open over your favorite tee.",
+      "inStock": true,
+      "featured": true,
+      "reviews": []
+    },
+    {
+      "id": "5",
+      "name": "Distressed Denim Jeans",
+      "price": 1899,
+      "category": "Trousers",
+      "image": "https://images.unsplash.com/photo-1542272604-78fa28af2f40?q=80&w=1000&auto=format&fit=crop",
+      "description": "Straight-leg distressed denim jeans with custom knee rips and a washed indigo finish.",
+      "inStock": true,
+      "featured": false,
+      "reviews": []
+    },
+    {
+      "id": "6",
+      "name": "Chunky Skate Shoes",
+      "price": 2199,
+      "category": "Shoes",
+      "image": "https://images.unsplash.com/photo-1608231387042-66d1773070a5?q=80&w=1000&auto=format&fit=crop",
+      "description": "Extra wide chunky skate shoes with heavily padded tongue and durable suede panels.",
+      "inStock": true,
+      "featured": false,
+      "reviews": []
+    },
+    {
+      "id": "7",
+      "name": "Washed Band Tee",
+      "price": 899,
+      "category": "Shirts",
+      "image": "https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?q=80&w=1000&auto=format&fit=crop",
+      "description": "Acid washed blank tee with a dropped shoulder fit and heavy weight cotton.",
+      "inStock": true,
+      "featured": false,
+      "reviews": []
+    },
+    {
+      "id": "8",
+      "name": "Parachute Pants",
+      "price": 1599,
+      "category": "Trousers",
+      "image": "https://images.unsplash.com/photo-1517438476312-10d79c077509?q=80&w=1000&auto=format&fit=crop",
+      "description": "Lightweight nylon parachute pants. Features ultra-baggy fit with elastic waistband.",
+      "inStock": true,
+      "featured": false,
+      "reviews": []
+    },
+    {
+      "name": "Muhammad Hanzala",
+      "price": 233,
+      "category": "Trousers",
+      "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=1000&auto=format&fit=crop",
+      "description": "fasfsafafsafafsa",
+      "inStock": true,
+      "featured": true,
+      "id": "1775323366292"
+    }
+  ],
+  "orders": []
+}

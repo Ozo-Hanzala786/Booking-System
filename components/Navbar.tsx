@@ -1,12 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import { ShoppingCart, Menu, X } from "lucide-react";
+import { ShoppingCart, Menu, X, ShieldCheck } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useCart } from "@/context/CartContext";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const { itemCount, setIsCartOpen } = useCart();
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-card-border">
@@ -21,21 +23,31 @@ export function Navbar() {
             <div className="ml-10 flex items-baseline space-x-8">
               <Link href="/" className="hover:text-accent font-medium transition-colors">Home</Link>
               <Link href="/products" className="hover:text-accent font-medium transition-colors">Products</Link>
-              <Link href="/contact" className="hover:text-accent font-medium transition-colors">Contact</Link>
+              <Link href="/admin" className="hover:text-accent font-medium transition-colors flex items-center gap-1"><ShieldCheck size={16}/> Admin</Link>
             </div>
           </div>
-          <div className="hidden md:flex items-center space-x-4">
-            <Link href="/products" className="text-foreground hover:text-accent transition-colors">
-              <ShoppingCart size={20} />
-            </Link>
-            <Link href="/products" className="bg-accent hover:bg-accent-hover text-white px-4 py-2 rounded-full font-medium transition-colors shadow-[0_0_15px_rgba(255,95,31,0.3)] hover:shadow-[0_0_20px_rgba(255,95,31,0.5)]">
+          <div className="hidden md:flex items-center space-x-6">
+            <button onClick={() => setIsCartOpen(true)} className="relative text-foreground hover:text-accent transition-colors">
+              <ShoppingCart size={22} />
+              {itemCount > 0 && (
+                <span className="absolute -top-2 -right-2 bg-accent text-white text-[10px] font-bold w-5 h-5 flex items-center justify-center rounded-full">
+                  {itemCount}
+                </span>
+              )}
+            </button>
+            <Link href="/products" className="bg-accent hover:bg-accent-hover text-white px-5 py-2.5 text-sm rounded-full font-bold uppercase transition-colors shadow-[0_0_15px_rgba(255,95,31,0.3)] hover:shadow-[0_0_20px_rgba(255,95,31,0.5)]">
                Shop Now
             </Link>
           </div>
           <div className="-mr-2 flex md:hidden items-center space-x-4">
-            <Link href="/products" className="text-foreground hover:text-accent transition-colors">
-              <ShoppingCart size={20} />
-            </Link>
+            <button onClick={() => setIsCartOpen(true)} className="relative text-foreground hover:text-accent transition-colors">
+              <ShoppingCart size={22} />
+              {itemCount > 0 && (
+                <span className="absolute -top-2 -right-2 bg-accent text-white text-[10px] font-bold w-5 h-5 flex items-center justify-center rounded-full">
+                  {itemCount}
+                </span>
+              )}
+            </button>
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md hover:text-accent hover:bg-card border border-transparent transition-colors"
@@ -57,9 +69,9 @@ export function Navbar() {
             className="md:hidden border-b border-card-border bg-background overflow-hidden"
           >
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              <Link href="/" onClick={() => setIsOpen(false)} className="block px-3 py-2 rounded-md text-base font-medium hover:text-accent hover:bg-card">Home</Link>
-              <Link href="/products" onClick={() => setIsOpen(false)} className="block px-3 py-2 rounded-md text-base font-medium hover:text-accent hover:bg-card">Products</Link>
-              <Link href="/contact" onClick={() => setIsOpen(false)} className="block px-3 py-2 rounded-md text-base font-medium hover:text-accent hover:bg-card">Contact</Link>
+              <Link href="/" onClick={() => setIsOpen(false)} className="block px-3 py-3 rounded-md text-base font-medium hover:text-accent hover:bg-card">Home</Link>
+              <Link href="/products" onClick={() => setIsOpen(false)} className="block px-3 py-3 rounded-md text-base font-medium hover:text-accent hover:bg-card">Products</Link>
+              <Link href="/admin" onClick={() => setIsOpen(false)} className="block px-3 py-3 rounded-md text-base font-medium hover:text-accent hover:bg-card">Admin Dashboard</Link>
             </div>
           </motion.div>
         )}
